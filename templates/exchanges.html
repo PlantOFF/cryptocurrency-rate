@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Курс {{pair}}</h1>
+<a class="btn btn-success" href="/logout">Выйти</a>
+<form>
+    <label>Базовая валюта</label>
+    <input type="text" class="form-control" name="fromForm" value={{f}} />
+    <label>Валюта котировки</label>
+    <input type="text" class="form-control" name="toForm" value={{s}} />
+    <input type="submit" class="btn btn-success" value="Выбрать"/>
+</form>
+<table class="table">
+    <tr>
+        <td>BINANCE</td>
+        <td>OKX</td>
+        <td>BYBIT</td>
+        <td>BITGET</td>
+    </tr>
+    <tr>
+        <td>{{binance_price}}</td>
+        <td>{{okx_price}}</td>
+        <td>{{bybit_price}}</td>
+        <td>{{bitget_price}}</td>
+    </tr>
+</table>
+{% endblock %}
